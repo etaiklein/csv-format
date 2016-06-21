@@ -9,11 +9,11 @@ $("document").ready(function(){
             complete: function(results, file, inputElem, event) {
 
                 if (results)
-                    $("table tr").remove();
+                    $("#results").empty();
 
                 for(var i=0; i < results.results.rows.length; i++){
                     var k = results.results.rows[i]
-                    $("table > tbody").append("<tr><td>"+ formatResult(k) + "</td></tr>");
+                    $("#results").append("<div>"+ formatResult(k) + "<div>");
                 }
             }
         });
